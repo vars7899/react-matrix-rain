@@ -1,5 +1,7 @@
 # React Matrix Rain
 
+## ![ScreenShot](./assets/ex-img.png)
+
 React Matrix Rain implements JavaScript canvas element to create matrix rain effect. Try out this locally
 on the computer, you will nees NodeJS and any package manager( NPM/Yarn ).
 
