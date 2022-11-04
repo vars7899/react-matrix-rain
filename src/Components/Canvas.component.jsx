@@ -6,6 +6,7 @@ import {
   _default_textColor,
   _default_textString,
 } from "../defaultSetting";
+import PropTypes from "prop-types";
 
 const Canvas = ({
   backgroundColor = _default_backgroundColor,
@@ -80,6 +81,15 @@ const Canvas = ({
       <canvas style={customStyle} ref={canvasEl} />
     </>
   );
+};
+
+Canvas.propTypes = {
+  backgroundColor: PropTypes.string,
+  textColor: PropTypes.string,
+  fontSize: PropTypes.number,
+  textString: PropTypes.string,
+  height: PropTypes.number,
+  width: PropTypes.number,
 };
 
 export default Canvas;
