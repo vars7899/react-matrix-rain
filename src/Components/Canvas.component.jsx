@@ -3,6 +3,7 @@ import { Effect } from "../Classes/Animation";
 import {
   _default_backgroundColor,
   _default_fontSize,
+  _default_orientation,
   _default_textColor,
   _default_textString,
 } from "../defaultSetting";
@@ -13,6 +14,7 @@ const Canvas = ({
   textColor = _default_textColor,
   fontSize = _default_fontSize,
   textString = _default_textString,
+  orientation = _default_orientation,
   height,
   width,
 }) => {
@@ -31,7 +33,8 @@ const Canvas = ({
       canvas.width,
       canvas.height,
       fontSize,
-      textString
+      textString,
+      orientation
     );
     let _animationFrameID;
     let _lastTime = 0;
