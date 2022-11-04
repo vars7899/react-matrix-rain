@@ -40,8 +40,8 @@ const Canvas = ({
 
     // Function --> to update the size of canvas
     function handleCanvasSpanSize() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.width = height ? height : window.innerWidth;
+      canvas.height = width ? width : window.innerHeight;
       effectAni.resizeEffect(canvas.width, canvas.height);
     }
     handleCanvasSpanSize();
@@ -64,8 +64,11 @@ const Canvas = ({
       _animationFrameID = window.requestAnimationFrame(animate);
     }
     animate(0);
+
+    // Add resize event listener to update the canvas size
     window.addEventListener("resize", handleCanvasSpanSize);
 
+    // Cleanup
     return () => {
       window.removeEventListener("resize", handleCanvasSpanSize);
       window.cancelAnimationFrame(_animationFrameID);
